@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "pages/api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/telegram",
+      "methods": ["POST"],
+      "dest": "pages/api/telegram.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
